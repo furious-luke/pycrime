@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-version = '0.0.0'
+version = '0.0.1'
 
 setup(
     name='pycrime',
@@ -25,6 +25,7 @@ setup(
     include_package_data=True,
     package_data={'': ['*.txt', '*.js', '*.html', '*.*']},
     install_requires=[
+        'base-api==0.0.0'
     ],
     extras_require={},
     entry_points={},
