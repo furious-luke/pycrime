@@ -1,10 +1,8 @@
 from setuptools import find_packages, setup
-from pycrime import __version__
-
 
 setup(
     name='pycrime',
-    version=__version__,
+    version='0.0.3',
     author='Luke Hodkinson',
     author_email='furious.luke@gmail.com',
     maintainer='Luke Hodkinson',
