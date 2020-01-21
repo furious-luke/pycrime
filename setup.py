@@ -1,16 +1,16 @@
 from setuptools import find_packages, setup
+from pycrime import __version__
 
-version = '0.0.1'
 
 setup(
     name='pycrime',
-    version=version,
+    version=__version__,
     author='Luke Hodkinson',
     author_email='furious.luke@gmail.com',
     maintainer='Luke Hodkinson',
     maintainer_email='furious.luke@gmail.com',
     description='Fetch crime statistics from the ExpenseCheck crime statistics API.',
-    url='https://github.com/furious.luke/pycrime',
+    url='https://github.com/furious-luke/pycrime',
     long_description='',
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -25,7 +25,7 @@ setup(
     include_package_data=True,
     package_data={'': ['*.txt', '*.js', '*.html', '*.*']},
     install_requires=[
-        'base-api==0.0.0'
+        'base-api==0.0.1'
     ],
     extras_require={},
     entry_points={},
