@@ -4,6 +4,8 @@ from baseapi.apis import GraphqlApi
 locality_statistics_query = '''
   query localityStatistics($postcode: String!) {
     localityStatistics(postcode: $postcode) {
+      localityTheftRate,
+      stateTheftRate,
       theftStateAnomaly
     }
   }

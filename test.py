@@ -1,7 +1,9 @@
+import os
+
 from pycrime import CrimeClient
 
 
-jwt = None
+jwt = os.environ.get('CRIME_API_KEY')
 client = CrimeClient(jwt=jwt)
-response = client.locality_statistics('5000')
+response = client.locality_statistics('3000')
 print(response)
