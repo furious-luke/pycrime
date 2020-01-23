@@ -30,4 +30,13 @@ client.locality_statistics(3000)
 ```
 
 Here, the postcode for Melbourne's CBD, 3000, has been used. Please
-substitute for the postcode of interest.
+substitute for the postcode of interest. The return value is a `dict`
+containing shaped like the following:
+
+``` python
+{
+    'localityTheftRate': 27524.8484848485,  # per 100k population
+    'stateTheftRate': 3448.8149871704,      # per 100k population
+    'theftStateAnomaly': 698.0958267475     # percentage
+}
+```
