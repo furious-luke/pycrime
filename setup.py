@@ -1,12 +1,17 @@
 from setuptools import find_packages, setup
 
 
+def read_file(path):
+    with open(path) as f:
+        return f.read()
+
+
 # TODO: I would rather import this as opposed to parsing it, but when
 # importing during installation it breaks due to the __init__.py file
 # trying to load in other modules.
 def parse_version():
-    with open('./pycrime/__version__.py') as f:
-        return f.read().split('=')[1].strip()[1:-1]
+    content = read_file('./baseapi/__version__.py')
+    return content.split('=')[1].strip()[1:-1]
 
 
 setup(
@@ -16,9 +21,11 @@ setup(
     author_email='furious.luke@gmail.com',
     maintainer='Luke Hodkinson',
     maintainer_email='furious.luke@gmail.com',
-    description='Fetch crime statistics from the ExpenseCheck crime statistics API.',
+    description=(
+        'Fetch crime statistics from the ExpenseCheck crime statistics API.'
+    ),
+    long_description=read_file('./README.md'),
     url='https://github.com/furious-luke/pycrime',
-    long_description='',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
