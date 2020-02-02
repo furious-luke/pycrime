@@ -25,6 +25,7 @@ setup(
         'Fetch crime statistics from the ExpenseCheck crime statistics API.'
     ),
     long_description=read_file('./README.md'),
+    long_description_content_type='text/markdown',
     url='https://github.com/furious-luke/pycrime',
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -39,7 +40,7 @@ setup(
     include_package_data=True,
     package_data={'': ['*.txt', '*.js', '*.html', '*.*']},
     install_requires=[
-        'base-api==0.0.1'
+        'base-api==0.0.2'
     ],
     extras_require={},
     entry_points={},
