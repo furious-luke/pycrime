@@ -10,7 +10,7 @@ def read_file(path):
 # importing during installation it breaks due to the __init__.py file
 # trying to load in other modules.
 def parse_version():
-    content = read_file('./baseapi/__version__.py')
+    content = read_file('./pycrime/__version__.py')
     return content.split('=')[1].strip()[1:-1]
 
 
