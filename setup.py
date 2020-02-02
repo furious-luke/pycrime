@@ -1,10 +1,17 @@
 from setuptools import find_packages, setup
 
-from pycrime.__version__ import __version__
+
+# TODO: I would rather import this as opposed to parsing it, but when
+# importing during installation it breaks due to the __init__.py file
+# trying to load in other modules.
+def parse_version():
+    with open('./pycrime/__version__.py') as f:
+        return f.read().split('=')[1].strip()[1:-1]
+
 
 setup(
     name='pycrime',
-    version=__version__,
+    version=parse_version(),
     author='Luke Hodkinson',
     author_email='furious.luke@gmail.com',
     maintainer='Luke Hodkinson',
